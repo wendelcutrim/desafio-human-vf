@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url('/Background.jpg');
     background-size: cover;
     font-family: 'Texturina';
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,6 +48,22 @@ header button {
     cursor: pointer;
 }
 
+.drop-down {
+    display: none;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.drop-down div {
+    background-color: white;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 4px;
+}
+
 .page-title {
     display: flex;
     flex-direction: column;
@@ -58,7 +74,7 @@ header button {
     margin-top: 15vh;
 }
 
-.page-title div{
+.page-title div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +82,7 @@ header button {
     width: 45%;
 }
 
-.page-title h1{
+.page-title h1 {
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
@@ -88,7 +104,7 @@ header button {
     margin-top: 4rem;
 }
 
-#btn-1{
+#btn-1 {
     width: 20%;
     background-color: white;
     color: #167B63;
@@ -98,7 +114,7 @@ header button {
     border: none;
 }
 
-#btn-2{
+#btn-2 {
     width: 20%;
     background: rgba(221, 221, 221, 0.05);
     color: white;
@@ -108,6 +124,8 @@ header button {
     border: 1px solid white;
     margin-left: 1rem;
 }
+
+
 
 footer {
     display: flex;
@@ -119,9 +137,119 @@ footer {
     padding: 3rem;
 }
 
-footer h3{
+footer h3 {
     color: white;
     text-align: center;
     font-weight: lighter;
     margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 40px 50px;
+    }
+
+    header nav a {
+        font-size: 12px;
+        padding: 20px 6px;
+    }
+
+}
+
+@media (max-width: 769px) {
+    body {
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header button {
+        display: none;
+    }
+
+    .drop-down {
+        display: inline-block
+    }
+
+    .page-title div {
+        width: 100%;
+    }
+
+    .page-title h1 {
+        font-size: 2.7rem;
+    }
+
+    .page-title h3 {
+        margin-top: 2.2rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header button {
+        display: none;
+    }
+
+    .drop-down {
+        display: inline-block
+    }
+
+    .page-title div {
+        width: 100%;
+    }
+
+    .page-title h1 {
+        font-size: 2.3rem;
+    }
+
+    .page-title h3 {
+        margin-top: 1.9rem;
+        width: 90%;
+    }
+
+    #page-title-button {
+        flex-direction: column;
+    }
+
+    #btn-1 {
+        width: 80%;
+    }
+    
+    #btn-2 {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        padding: 3rem;
+    }
 }
